@@ -13,7 +13,7 @@ var orderRouter = require("./routes/order");
 var app = express();
 
 // Intégration de la bdd
-var mongoDB = process.env.MONGODB_URI;
+var mongoDB = process.env.MONGODB_URI || "mongodb+srv://delacrepaul:O5zygBvtTbMir4zV@iut.ujrbwia.mongodb.net/projet";
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
